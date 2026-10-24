@@ -20,7 +20,7 @@
      Aplicadas automaticamente em toda a página.
      ===================================================== -->
 <script>
-  var NOME_DO_PRODUTO = "[nome do produto]";
+  var NOME_DO_PRODUTO = "+200 Experimentos de Química em PDF";
   var PRECO_ANTIGO    = "R$ 34,90";
   var PRECO_PROMO     = "R$ 14,90";
   var LINK_CHECKOUT   = "[link do checkout da Cakto]";
@@ -103,15 +103,11 @@ section{padding:var(--space-5) 0}
 .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
 .js .reveal.in{opacity:1;transform:none}
 
-/* ============ BANNER OFERTA VÁLIDA ATÉ MEIA NOITE ============ */
-.promo-bar{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#ffb703,#ff8a00);color:#1a1000;padding:.55rem 0}
+/* ============ BANNER OFERTA VÁLIDA ATÉ MEIA NOITE (DESFIXADO) ============ */
+.promo-bar{background:linear-gradient(90deg,#ffb703,#ff8a00);color:#1a1000;padding:.6rem 1rem;text-align:center}
 .promo-bar[hidden]{display:none}
-.promo-inner{display:flex;align-items:center;justify-content:center;gap:.6rem 1rem;flex-wrap:wrap;text-align:center}
-.promo-title{font-family:var(--font-title);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
-.timer{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-title);font-weight:800;font-variant-numeric:tabular-nums}
-.timer .unit{background:#1a1000;color:#fff;border-radius:8px;padding:.2rem .45rem;min-width:2.1rem;text-align:center;font-size:.95rem;line-height:1.2}
-.timer .unit small{display:block;font-size:.55rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
-.timer .sep{font-weight:800}
+.promo-inner{display:flex;align-items:center;justify-content:center;text-align:center}
+.promo-title{font-family:var(--font-title);font-weight:800;font-size:.88rem;letter-spacing:.08em;text-transform:uppercase}
 
 /* ============ HERO (MOCKUP DIRETO NO FUNDO) ============ */
 .hero{padding:var(--space-4) 0 var(--space-5);background:radial-gradient(550px 320px at 50% 15%,rgba(61,220,132,.14),transparent 70%)}
@@ -293,16 +289,10 @@ section{padding:var(--space-5) 0}
   </defs>
 </svg>
 
-<!-- =============== BANNER: OFERTA VÁLIDA ATÉ MEIA NOITE + TIMER =============== -->
+<!-- =============== BANNER: OFERTA VÁLIDA ATÉ MEIA NOITE =============== -->
 <div class="promo-bar" id="promoBar">
   <div class="wrap promo-inner">
     <span class="promo-title">Oferta válida até meia noite</span>
-    <div class="timer" role="timer" aria-live="off" aria-label="Tempo restante da promoção">
-      <span class="unit" id="tD">00<small>dias</small></span><span class="sep" aria-hidden="true">:</span>
-      <span class="unit" id="tH">00<small>horas</small></span><span class="sep" aria-hidden="true">:</span>
-      <span class="unit" id="tM">00<small>min</small></span><span class="sep" aria-hidden="true">:</span>
-      <span class="unit" id="tS">00<small>seg</small></span>
-    </div>
   </div>
 </div>
 
@@ -357,24 +347,7 @@ section{padding:var(--space-5) 0}
   </div>
 </section>
 
-<!-- =============== 5. FACILIDADES =============== -->
-<section aria-labelledby="t-facil" style="padding-top:0">
-  <div class="wrap">
-    <h2 id="t-facil">Facilidades</h2>
-    <div class="card reveal">
-      <ul class="list">
-        <li><svg class="ic"><use href="#i-check"/></svg>Acesso digital, sem envio físico.</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Leitura pelo celular, tablet ou computador.</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Download do PDF para consultar quando quiser.</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Conteúdo reunido em um só lugar.</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Compra rápida em checkout seguro.</li>
-        <li><svg class="ic"><use href="#i-check"/></svg>Acesso após a confirmação do pagamento.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- =============== 6. APRESENTAÇÃO VISUAL DO PRODUTO =============== -->
+<!-- =============== 5. APRESENTAÇÃO VISUAL DO PRODUTO =============== -->
 <section aria-labelledby="t-visual">
   <div class="wrap">
     <span class="pill">Por dentro do material</span>
@@ -824,10 +797,9 @@ section{padding:var(--space-5) 0}
 
 </main>
 
-<!-- =============== 15. RODAPÉ =============== -->
+<!-- =============== RODAPÉ =============== -->
 <footer class="site-footer">
   <div class="wrap">
-    <div class="name" data-bind="produto">[nome do produto]</div>
     <p>Material educativo digital com mais de 200 experimentos de Química, em PDF.</p>
     <nav aria-label="Links do rodapé">
       <ul class="footer-links">
@@ -837,7 +809,7 @@ section{padding:var(--space-5) 0}
         <li><a href="#">Suporte</a></li>
       </ul>
     </nav>
-    <p class="legal">© <span id="ano">2026</span> <span data-bind="produto">[nome do produto]</span>. Todos os direitos reservados. Material educativo; não substitui a orientação de professor ou profissional qualificado. Realize experimentos com supervisão e segurança.</p>
+    <p class="legal">© <span id="ano">2026</span> +200 Experimentos de Química em PDF. Todos os direitos reservados. Material educativo; não substitui a orientação de professor ou profissional qualificado. Realize experimentos com supervisão e segurança.</p>
   </div>
 </footer>
 
@@ -847,39 +819,12 @@ section{padding:var(--space-5) 0}
   function bind(name, value) {
     document.querySelectorAll('[data-bind="' + name + '"]').forEach(function (el) { el.textContent = value; });
   }
-  bind('produto', NOME_DO_PRODUTO);
   bind('antigo', PRECO_ANTIGO);
   bind('promo', PRECO_PROMO);
   bind('mega', PRECO_MEGA);
   document.querySelectorAll('.js-checkout').forEach(function (a) { a.setAttribute('href', LINK_CHECKOUT); });
   document.querySelectorAll('.js-checkout-mega').forEach(function (a) { a.setAttribute('href', LINK_CHECKOUT_MEGA); });
   document.getElementById('ano').textContent = new Date().getFullYear();
-  if (NOME_DO_PRODUTO && NOME_DO_PRODUTO.charAt(0) !== '[') {
-    document.title = NOME_DO_PRODUTO + ' | +200 Experimentos de Química em PDF';
-  }
-})();
-
-/* ============ TIMER DA PROMOÇÃO ============ */
-(function () {
-  var bar = document.getElementById('promoBar');
-  var fim = new Date(DATA_FIM_PROMO).getTime();
-  if (isNaN(fim)) { bar.hidden = true; return; }
-  var els = { d: document.getElementById('tD'), h: document.getElementById('tH'), m: document.getElementById('tM'), s: document.getElementById('tS') };
-  var labels = { d: 'dias', h: 'horas', m: 'min', s: 'seg' };
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
-  function set(k, v) { els[k].innerHTML = pad(v) + '<small>' + labels[k] + '</small>'; }
-  var id;
-  function tick() {
-    var diff = fim - Date.now();
-    if (diff <= 0) { bar.hidden = true; clearInterval(id); return; }
-    var s = Math.floor(diff / 1000);
-    set('d', Math.floor(s / 86400));
-    set('h', Math.floor((s % 86400) / 3600));
-    set('m', Math.floor((s % 3600) / 60));
-    set('s', s % 60);
-  }
-  tick();
-  id = setInterval(tick, 1000);
 })();
 
 /* ============ CARROSSEL AUTOMÁTICO (imagens lado a lado, em loop) ============ */
