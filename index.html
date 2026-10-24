@@ -26,6 +26,8 @@
   var LINK_CHECKOUT   = "https://pay.cakto.com.br/ehb4mqq_1120559";
   var PRECO_MEGA      = "R$ 37,90";
   var LINK_CHECKOUT_MEGA = "https://pay.cakto.com.br/7ye7z7j";
+  var PRECO_ESPECIAL  = "R$ 24,90";
+  var LINK_CHECKOUT_ESPECIAL = "https://pay.cakto.com.br/tqvzbvb";
   // Data/hora real em que a promoção termina (formato ISO, fuso de Brasília).
   // Use uma data que você realmente vai respeitar. Ao chegar nela, o banner some.
   var DATA_FIM_PROMO  = "2026-10-30T23:59:59-03:00";
@@ -252,6 +254,32 @@ section{padding:var(--space-5) 0}
 .site-footer a{color:var(--muted)}
 .site-footer a:hover{color:var(--text)}
 .legal{font-size:.78rem;margin-top:var(--space-2)}
+
+/* ============ POP-UP MODAL OFERTA ESPECIAL 24,90 ============ */
+.popup-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.popup-overlay.active{opacity:1;visibility:visible}
+.popup-overlay[hidden]{display:none}
+.popup-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.84);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.popup-card{position:relative;z-index:2;width:100%;max-width:480px;background:linear-gradient(180deg,#1e1807,#141416 35%);border:2px solid var(--amber);border-radius:var(--radius-lg);padding:1.8rem 1.4rem;box-shadow:0 20px 60px rgba(0,0,0,.85),0 0 40px rgba(255,183,3,.25);transform:scale(.92);transition:transform .25s cubic-bezier(.16,1,.3,1);max-height:92vh;overflow-y:auto;text-align:center}
+.popup-overlay.active .popup-card{transform:scale(1)}
+.popup-close{position:absolute;top:.75rem;right:.85rem;background:transparent;border:none;color:var(--muted);font-size:1.8rem;line-height:1;cursor:pointer;padding:.3rem .5rem;border-radius:8px;transition:color .2s,background .2s}
+.popup-close:hover{color:var(--text);background:rgba(255,255,255,.08)}
+.popup-badge{display:inline-block;background:linear-gradient(90deg,#ffb703,#ff8a00);color:#2b1d00;font-family:var(--font-title);font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .85rem;border-radius:999px;margin-bottom:.8rem;box-shadow:0 2px 10px rgba(255,183,3,.3)}
+.popup-title{font-family:var(--font-title);font-size:1.28rem;font-weight:800;line-height:1.3;color:var(--text);margin:0 0 .7rem;text-align:center}
+.popup-title span{color:var(--amber);display:inline-block}
+.popup-desc{font-size:.9rem;color:#c8c8d0;line-height:1.55;margin:0 0 1rem;text-align:center}
+.popup-box{background:rgba(255,183,3,.06);border:1px solid rgba(255,183,3,.25);border-radius:var(--radius-sm);padding:1rem;margin-bottom:1.2rem}
+.popup-price-row{display:flex;align-items:baseline;justify-content:center;gap:.7rem;margin-bottom:.8rem}
+.popup-price-old{font-size:.85rem;color:var(--muted);text-decoration:line-through}
+.popup-price-val{font-family:var(--font-title);font-size:2.2rem;font-weight:800;color:var(--amber);line-height:1}
+.popup-list{list-style:none;padding:0;margin:0;display:grid;gap:.5rem;text-align:left;font-size:.85rem;color:#e2e2e8}
+.popup-list li{display:flex;align-items:flex-start;gap:.55rem}
+.popup-list .ic{width:1.05rem;height:1.05rem;color:var(--amber);flex-shrink:0;margin-top:.15rem}
+.popup-actions{display:flex;flex-direction:column;gap:.75rem;align-items:stretch;text-align:center}
+.popup-btn-accept{background:var(--amber);color:#2b1d00;font-family:var(--font-title);font-weight:800;font-size:1.02rem;padding:.9rem 1.2rem;min-height:52px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(255,183,3,.35);transition:all .2s ease}
+.popup-btn-accept:hover{background:#ffc933;transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,183,3,.45)}
+.popup-btn-decline{background:transparent;border:none;color:var(--muted);font-size:.84rem;font-weight:600;padding:.5rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer;transition:color .2s ease;display:inline-block}
+.popup-btn-decline:hover{color:var(--text)}
 
 /* ============ MOVIMENTO REDUZIDO ============ */
 @media (prefers-reduced-motion:reduce){
@@ -936,6 +964,95 @@ section{padding:var(--space-5) 0}
     });
   });
 })();
+
+/* ============ POP-UP DE OFERTA ESPECIAL (UPSELL 24,90) ============ */
+(function () {
+  var popup = document.getElementById('popupSpecial');
+  var trigger = document.querySelector('.offer-basic .js-checkout');
+  var closeBtn = document.getElementById('popupClose');
+  var backdrop = document.getElementById('popupBackdrop');
+  var btnAccept = document.getElementById('btnAcceptSpecial');
+  var btnDecline = document.getElementById('btnDeclineSpecial');
+  if (!popup || !trigger) return;
+
+  function openPopup(e) {
+    if (e) e.preventDefault();
+    popup.hidden = false;
+    void popup.offsetWidth;
+    popup.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (btnAccept) btnAccept.focus();
+  }
+
+  function closePopup() {
+    popup.classList.remove('active');
+    setTimeout(function () {
+      popup.hidden = true;
+      document.body.style.overflow = '';
+    }, 250);
+  }
+
+  trigger.addEventListener('click', openPopup);
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+  if (backdrop) backdrop.addEventListener('click', closePopup);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !popup.hidden) {
+      closePopup();
+    }
+  });
+
+  if (btnAccept) {
+    btnAccept.setAttribute('href', LINK_CHECKOUT_ESPECIAL);
+  }
+  if (btnDecline) {
+    btnDecline.setAttribute('href', LINK_CHECKOUT);
+  }
+})();
 </script>
+
+<!-- =============== POP-UP / MODAL DE OFERTA ESPECIAL (UPSELL 24,90) =============== -->
+<div class="popup-overlay" id="popupSpecial" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+  <div class="popup-backdrop" id="popupBackdrop"></div>
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" aria-label="Fechar pop-up">&times;</button>
+    
+    <div class="popup-badge">🔥 OFERTA ESPECIAL EXCLUSIVA</div>
+    
+    <h3 class="popup-title" id="popupTitle">
+      Você ganhou uma oferta especial da Mega Oferta por apenas <span>R$ 24,90</span>
+    </h3>
+    
+    <p class="popup-desc">
+      Antes de continuar, liberamos um <strong>desconto exclusivo de lançamento</strong> para você levar o material completo com todos os 3 bônus inclusos:
+    </p>
+    
+    <div class="popup-box">
+      <div class="popup-price-row">
+        <span class="popup-price-old">De R$ 99,60 por:</span>
+        <span class="popup-price-val">R$ 24,90</span>
+      </div>
+      <ul class="popup-list">
+        <li><svg class="ic"><use href="#i-check"/></svg><strong>PDF completo com mais de 200 experimentos</strong></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #1</span>Tabela periódica completa e tabela de pH</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #2</span>Relatórios e certificado para impressão</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #3</span>Desafios e guias práticos da química</span></li>
+      </ul>
+    </div>
+    
+    <div class="popup-actions">
+      <!-- Opção de Comprar a Oferta Especial -->
+      <a class="btn popup-btn-accept" id="btnAcceptSpecial" href="https://pay.cakto.com.br/tqvzbvb">
+        <svg class="ic" style="width:1.2rem;height:1.2rem;margin-right:.4rem"><use href="#i-zap"/></svg>
+        Quero a Mega Oferta por R$ 24,90
+      </a>
+      
+      <!-- Opção de Abandonar a Oferta e continuar com a básica de 14,90 -->
+      <a class="popup-btn-decline" id="btnDeclineSpecial" href="https://pay.cakto.com.br/ehb4mqq_1120559">
+        Não quero os bônus, continuar com a oferta de R$ 14,90 &rarr;
+      </a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
