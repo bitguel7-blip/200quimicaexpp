@@ -769,7 +769,7 @@ section{padding:var(--space-5) 0}
         <li><svg class="ic"><use href="#i-check"/></svg>Acesso digital após confirmação do pagamento</li>
         <li><svg class="ic"><use href="#i-check"/></svg>Pagamento único (sem mensalidade)</li>
       </ul>
-      <a class="btn btn-subtle js-checkout" href="https://pay.cakto.com.br/ehb4mqq_1120559">Quero apenas o Guia por <span data-bind="promo">R$ 14,90</span></a>
+      <a class="btn btn-subtle js-checkout" id="btnOferta1490" data-action="open-popup-special" onclick="return openSpecialPopup(event)" href="https://pay.cakto.com.br/ehb4mqq_1120559">Quero apenas o Guia por <span data-bind="promo">R$ 14,90</span></a>
       <p class="fine" style="margin-top:.8rem">Acesso direto ao PDF básico, sem os bônus exclusivos.</p>
     </div>
 
@@ -840,6 +840,50 @@ section{padding:var(--space-5) 0}
     <p class="legal">© <span id="ano">2026</span> +200 Experimentos de Química em PDF. Todos os direitos reservados. Material educativo; não substitui a orientação de professor ou profissional qualificado. Realize experimentos com supervisão e segurança.</p>
   </div>
 </footer>
+
+<!-- =============== POP-UP / MODAL DE OFERTA ESPECIAL (UPSELL 24,90) =============== -->
+<div class="popup-overlay" id="popupSpecial" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+  <div class="popup-backdrop" id="popupBackdrop" onclick="closeSpecialPopup()"></div>
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" type="button" onclick="closeSpecialPopup()" aria-label="Fechar pop-up">&times;</button>
+    
+    <div class="popup-badge">🔥 OFERTA ESPECIAL EXCLUSIVA</div>
+    
+    <h3 class="popup-title" id="popupTitle">
+      Você ganhou uma oferta especial da Mega Oferta por apenas <span>R$ 24,90</span>
+    </h3>
+    
+    <p class="popup-desc">
+      Antes de continuar, liberamos um <strong>desconto exclusivo de lançamento</strong> para você levar o material completo com todos os 3 bônus inclusos:
+    </p>
+    
+    <div class="popup-box">
+      <div class="popup-price-row">
+        <span class="popup-price-old">De R$ 99,60 por:</span>
+        <span class="popup-price-val">R$ 24,90</span>
+      </div>
+      <ul class="popup-list">
+        <li><svg class="ic"><use href="#i-check"/></svg><strong>PDF completo com mais de 200 experimentos</strong></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #1</span>Tabela periódica completa e tabela de pH</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #2</span>Relatórios e certificado para impressão</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #3</span>Desafios e guias práticos da química</span></li>
+      </ul>
+    </div>
+    
+    <div class="popup-actions">
+      <!-- Opção de Comprar a Oferta Especial -->
+      <a class="btn popup-btn-accept" id="btnAcceptSpecial" href="https://pay.cakto.com.br/tqvzbvb">
+        <svg class="ic" style="width:1.2rem;height:1.2rem;margin-right:.4rem"><use href="#i-zap"/></svg>
+        Quero a Mega Oferta por R$ 24,90
+      </a>
+      
+      <!-- Opção de Abandonar a Oferta e continuar com a básica de 14,90 -->
+      <a class="popup-btn-decline" id="btnDeclineSpecial" href="https://pay.cakto.com.br/ehb4mqq_1120559">
+        Não quero os bônus, continuar com a oferta de R$ 14,90 &rarr;
+      </a>
+    </div>
+  </div>
+</div>
 
 <script>
 /* ============ APLICA AS VARIÁVEIS CONFIGURÁVEIS ============ */
@@ -966,93 +1010,46 @@ section{padding:var(--space-5) 0}
 })();
 
 /* ============ POP-UP DE OFERTA ESPECIAL (UPSELL 24,90) ============ */
-(function () {
+function openSpecialPopup(e) {
+  if (e) {
+    if (typeof e.preventDefault === 'function') e.preventDefault();
+    if (typeof e.stopPropagation === 'function') e.stopPropagation();
+  }
   var popup = document.getElementById('popupSpecial');
-  var trigger = document.querySelector('.offer-basic .js-checkout');
-  var closeBtn = document.getElementById('popupClose');
-  var backdrop = document.getElementById('popupBackdrop');
+  if (!popup) return false;
+  popup.hidden = false;
+  void popup.offsetWidth;
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden';
   var btnAccept = document.getElementById('btnAcceptSpecial');
-  var btnDecline = document.getElementById('btnDeclineSpecial');
-  if (!popup || !trigger) return;
+  if (btnAccept) btnAccept.focus();
+  return false;
+}
 
-  function openPopup(e) {
-    if (e) e.preventDefault();
-    popup.hidden = false;
-    void popup.offsetWidth;
-    popup.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    if (btnAccept) btnAccept.focus();
+function closeSpecialPopup() {
+  var popup = document.getElementById('popupSpecial');
+  if (!popup) return;
+  popup.classList.remove('active');
+  setTimeout(function () {
+    popup.hidden = true;
+    document.body.style.overflow = '';
+  }, 250);
+}
+
+// Event delegation global como garantia adicional
+document.addEventListener('click', function (e) {
+  var target = e.target.closest('#btnOferta1490, [data-action="open-popup-special"], .offer-basic .js-checkout');
+  if (target) {
+    openSpecialPopup(e);
   }
+});
 
-  function closePopup() {
-    popup.classList.remove('active');
-    setTimeout(function () {
-      popup.hidden = true;
-      document.body.style.overflow = '';
-    }, 250);
+// Tecla ESC fecha o pop-up
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeSpecialPopup();
   }
-
-  trigger.addEventListener('click', openPopup);
-  if (closeBtn) closeBtn.addEventListener('click', closePopup);
-  if (backdrop) backdrop.addEventListener('click', closePopup);
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !popup.hidden) {
-      closePopup();
-    }
-  });
-
-  if (btnAccept) {
-    btnAccept.setAttribute('href', LINK_CHECKOUT_ESPECIAL);
-  }
-  if (btnDecline) {
-    btnDecline.setAttribute('href', LINK_CHECKOUT);
-  }
-})();
+});
 </script>
-
-<!-- =============== POP-UP / MODAL DE OFERTA ESPECIAL (UPSELL 24,90) =============== -->
-<div class="popup-overlay" id="popupSpecial" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
-  <div class="popup-backdrop" id="popupBackdrop"></div>
-  <div class="popup-card">
-    <button class="popup-close" id="popupClose" aria-label="Fechar pop-up">&times;</button>
-    
-    <div class="popup-badge">🔥 OFERTA ESPECIAL EXCLUSIVA</div>
-    
-    <h3 class="popup-title" id="popupTitle">
-      Você ganhou uma oferta especial da Mega Oferta por apenas <span>R$ 24,90</span>
-    </h3>
-    
-    <p class="popup-desc">
-      Antes de continuar, liberamos um <strong>desconto exclusivo de lançamento</strong> para você levar o material completo com todos os 3 bônus inclusos:
-    </p>
-    
-    <div class="popup-box">
-      <div class="popup-price-row">
-        <span class="popup-price-old">De R$ 99,60 por:</span>
-        <span class="popup-price-val">R$ 24,90</span>
-      </div>
-      <ul class="popup-list">
-        <li><svg class="ic"><use href="#i-check"/></svg><strong>PDF completo com mais de 200 experimentos</strong></li>
-        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #1</span>Tabela periódica completa e tabela de pH</span></li>
-        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #2</span>Relatórios e certificado para impressão</span></li>
-        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus #3</span>Desafios e guias práticos da química</span></li>
-      </ul>
-    </div>
-    
-    <div class="popup-actions">
-      <!-- Opção de Comprar a Oferta Especial -->
-      <a class="btn popup-btn-accept" id="btnAcceptSpecial" href="https://pay.cakto.com.br/tqvzbvb">
-        <svg class="ic" style="width:1.2rem;height:1.2rem;margin-right:.4rem"><use href="#i-zap"/></svg>
-        Quero a Mega Oferta por R$ 24,90
-      </a>
-      
-      <!-- Opção de Abandonar a Oferta e continuar com a básica de 14,90 -->
-      <a class="popup-btn-decline" id="btnDeclineSpecial" href="https://pay.cakto.com.br/ehb4mqq_1120559">
-        Não quero os bônus, continuar com a oferta de R$ 14,90 &rarr;
-      </a>
-    </div>
-  </div>
-</div>
 </body>
 </html>
