@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>+200 Experimentos de Química em PDF | Guia digital</title>
+<meta name="description" content="PDF digital com mais de 200 experimentos de Química organizados para estudar na prática. Pagamento único, acesso após a confirmação do pagamento.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="+200 Experimentos de Química em PDF">
+<meta property="og:description" content="Aprenda Química na prática com um guia digital de mais de 200 experimentos. Oferta de lançamento.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+
+<!-- =====================================================
+     VARIÁVEIS CONFIGURÁVEIS — EDITE AQUI
+     Aplicadas automaticamente em toda a página.
+     ===================================================== -->
+<script>
+  var NOME_DO_PRODUTO = "[nome do produto]";
+  var PRECO_ANTIGO    = "R$ 34,90";
+  var PRECO_PROMO     = "R$ 14,90";
+  var LINK_CHECKOUT   = "[link do checkout da Cakto]";
+  var PRECO_MEGA      = "R$ 24,90";
+  var LINK_CHECKOUT_MEGA = "[link do checkout da Mega Oferta]";
+  // Data/hora real em que a promoção termina (formato ISO, fuso de Brasília).
+  // Use uma data que você realmente vai respeitar. Ao chegar nela, o banner some.
+  var DATA_FIM_PROMO  = "2026-10-30T23:59:59-03:00";
+  document.documentElement.className += " js";
+</script>
+
+<style>
+/* ============ VARIÁVEIS CSS ============ */
+:root{
+  --bg:#0a0a0b;
+  --bg-2:#0f0f11;
+  --card:#141416;
+  --card-2:#1a1a1d;
+  --line:#26262b;
+  --text:#f5f5f6;
+  --muted:#a8a8b0;
+  --btn:#f5f5f6;
+  --btn-ink:#0a0a0b;
+  --green:#3ddc84;
+  --amber:#ffb703;
+  --blue:#6aa8ff;
+  --space-1:.5rem;--space-2:1rem;--space-3:1.5rem;--space-4:2.5rem;--space-5:3.5rem;
+  --radius-sm:12px;--radius:18px;--radius-lg:24px;
+  --font-title:"Manrope",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+}
+
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:84px}
+h1,h2,h3{font-family:var(--font-title);margin:0 0 var(--space-2);line-height:1.2;color:var(--text);text-align:center}
+h1{font-weight:800;font-size:clamp(1.9rem,8vw,2.5rem)}
+h2{font-weight:800;font-size:clamp(1.5rem,6vw,2rem)}
+h3{font-weight:700;font-size:1.05rem}
+p{margin:0 0 var(--space-2)}
+svg{max-width:100%}
+.wrap{width:min(560px,100% - 2rem);margin-inline:auto}
+section{padding:var(--space-5) 0}
+#oferta{scroll-margin-top:4.5rem}
+#depoimentos{scroll-margin-top:4.5rem}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:8px}
+.ic{width:1.25rem;height:1.25rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.pill{display:block;width:max-content;max-width:100%;margin:0 auto var(--space-2);padding:.35rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.lead{color:var(--muted);text-align:center}
+
+/* ============ BOTÕES ============ */
+.btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;min-height:56px;padding:.9rem 1.4rem;border:0;border-radius:999px;background:var(--btn);color:var(--btn-ink);font-family:var(--font-title);font-weight:800;font-size:1.05rem;text-decoration:none;text-align:center;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{background:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,255,255,.14)}
+.btn:active{transform:none}
+.btn-accent{background:var(--green)}
+.btn-accent:hover{background:#6af0a3}
+
+/* ============ CARDS ============ */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-3)}
+.card h3{text-align:left}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+.list li{display:flex;gap:.7rem;align-items:flex-start;color:#e4e4e8;font-size:.97rem}
+.list .ic{color:var(--green);margin-top:.15rem}
+.list.warn .ic{color:var(--amber)}
+.list.no .ic{color:#ff7a7a}
+.rows{display:grid;gap:.75rem}
+.row{display:flex;gap:.8rem;align-items:center;background:var(--card-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:.9rem 1rem;font-size:.95rem}
+.row .ic{color:var(--green)}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.tile{background:var(--card-2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem;text-align:center;font-size:.9rem;font-weight:500}
+.tile .ic{display:block;margin:0 auto .5rem;color:var(--blue);width:1.6rem;height:1.6rem}
+.fine{font-size:.82rem;color:var(--muted);text-align:center;margin:var(--space-2) 0 0}
+
+/* ============ REVEAL ============ */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ============ BANNER PROMOÇÃO EXCLUSIVA ============ */
+.promo-bar{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#ffb703,#ff8a00);color:#1a1000;padding:.55rem 0}
+.promo-bar[hidden]{display:none}
+.promo-inner{display:flex;align-items:center;justify-content:center;gap:.6rem 1rem;flex-wrap:wrap;text-align:center}
+.promo-title{font-family:var(--font-title);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.timer{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-title);font-weight:800;font-variant-numeric:tabular-nums}
+.timer .unit{background:#1a1000;color:#fff;border-radius:8px;padding:.2rem .45rem;min-width:2.1rem;text-align:center;font-size:.95rem;line-height:1.2}
+.timer .unit small{display:block;font-size:.55rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.timer .sep{font-weight:800}
+
+/* ============ 1. CABEÇALHO ============ */
+.top{padding:1rem 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--font-title);font-weight:800;font-size:1rem}
+.brand svg{width:1.4rem;height:1.4rem;color:var(--green)}
+
+/* ============ 2. HERO ============ */
+.hero{padding:var(--space-4) 0 var(--space-5);background:radial-gradient(500px 280px at 50% 0%,rgba(61,220,132,.12),transparent 70%)}
+.hero .lead{max-width:460px;margin:0 auto var(--space-3)}
+.hero-art{margin:var(--space-3) auto;display:flex;justify-content:center}
+.hero-art svg{width:min(320px,90%);height:auto}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float{animation:float 5s ease-in-out infinite}
+
+/* ============ 7. CARROSSEL VISUAL ============ */
+.shots{display:flex;gap:1rem;overflow-x:auto;padding:.25rem 1rem 1rem;margin:0 -1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.shots::-webkit-scrollbar{display:none}
+.shot{flex:0 0 220px;margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.75rem}
+.shot svg,.shot img{width:100%;height:auto;display:block;border-radius:10px}
+.shot figcaption{font-size:.82rem;color:var(--muted);text-align:center;margin-top:.6rem}
+
+/* ============ 8. PESSOA ============ */
+.photo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-3)}
+.photo svg{display:block;width:100%;height:auto}
+.closing{font-family:var(--font-title);font-weight:800;text-align:center;font-size:1.1rem;margin-top:var(--space-3)}
+
+/* ============ 10. APLICAÇÕES ============ */
+.uses{display:grid;gap:.75rem}
+.use{display:flex;gap:1rem;align-items:flex-start}
+.use .ic{width:1.6rem;height:1.6rem;color:var(--blue);margin-top:.2rem}
+.use h3{text-align:left;margin:0 0 .2rem}
+.use p{margin:0;color:var(--muted);font-size:.93rem}
+
+/* ============ AVALIAÇÕES / QUEM COMPROU, RECOMENDA ============ */
+.reviews-score{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;background:linear-gradient(135deg,#131e17,var(--card));border:1px solid rgba(61,220,132,.35);margin-bottom:var(--space-3);border-radius:var(--radius);padding:1.4rem}
+.score-badge{display:flex;flex-direction:column;align-items:flex-start}
+.score-num-wrap{display:flex;align-items:center;gap:.6rem}
+.score-num{font-family:var(--font-title);font-size:2.8rem;font-weight:800;line-height:1;color:var(--text)}
+.stars{display:inline-flex;gap:.2rem;color:var(--amber)}
+.stars .star-ic{width:1.15rem;height:1.15rem;fill:currentColor}
+.score-meta{font-size:.82rem;color:var(--muted);margin-top:.35rem}
+.score-stats{display:flex;align-items:center;gap:1.2rem}
+.score-stat{text-align:center}
+.score-stat strong{display:block;font-family:var(--font-title);font-weight:800;font-size:1.45rem;color:var(--green);line-height:1.1}
+.score-stat span{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.score-stat-div{width:1px;height:38px;background:var(--line)}
+
+/* Abas de filtro */
+.reviews-tabs{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.4rem;margin-bottom:var(--space-3);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.reviews-tabs::-webkit-scrollbar{display:none}
+.rev-tab{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;gap:.45rem;padding:.5rem 1.15rem;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted);font-family:var(--font-title);font-size:.84rem;font-weight:700;letter-spacing:.02em;cursor:pointer;white-space:nowrap;transition:all .2s ease}
+.rev-tab:hover{color:var(--text);border-color:#3e3e48;background:var(--card-2)}
+.rev-tab:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.rev-tab.active{background:var(--btn);color:var(--btn-ink);border-color:var(--btn);box-shadow:0 4px 16px rgba(255,255,255,.14)}
+.rev-tab .tab-count{font-size:.72rem;padding:.1rem .45rem;border-radius:999px;background:rgba(255,255,255,.12);color:inherit}
+.rev-tab.active .tab-count{background:rgba(0,0,0,.15)}
+
+/* Grid de avaliações */
+.reviews-grid{display:grid;gap:1rem}
+.rev-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;display:flex;flex-direction:column;gap:.85rem}
+.rev-card:hover{border-color:rgba(61,220,132,.38);transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.4)}
+.rev-card[hidden]{display:none!important}
+
+/* Cabeçalho do Card */
+.rev-header{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem}
+.rev-profile{display:flex;align-items:center;gap:.85rem}
+.rev-avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-title);font-weight:800;font-size:1rem;color:#fff;flex-shrink:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.rev-info{display:flex;flex-direction:column;gap:.15rem}
+.rev-name{font-family:var(--font-title);font-weight:800;font-size:1rem;color:var(--text);line-height:1.2}
+.rev-city{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:.3rem}
+.rev-city svg{width:.85rem;height:.85rem;color:var(--green)}
+.rev-stars{display:flex;gap:.15rem;color:var(--amber)}
+.rev-stars .star-ic{width:1rem;height:1rem;fill:currentColor}
+
+/* Badges e tags */
+.rev-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem}
+.rev-verified{display:inline-flex;align-items:center;gap:.3rem;background:rgba(61,220,132,.1);border:1px solid rgba(61,220,132,.28);color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.03em;padding:.2rem .65rem;border-radius:999px;text-transform:uppercase}
+.rev-verified svg{width:.8rem;height:.8rem}
+.rev-role{display:inline-block;background:var(--card-2);border:1px solid var(--line);color:var(--muted);font-size:.74rem;font-weight:600;padding:.2rem .65rem;border-radius:999px}
+
+/* Mensagem */
+.rev-quote{font-family:var(--font-title);font-weight:800;font-size:.98rem;color:var(--text);line-height:1.35;margin:0}
+.rev-msg{font-size:.93rem;color:#d8d8de;line-height:1.6;margin:0}
+.rev-date{font-size:.75rem;color:var(--muted);margin-top:auto}
+
+/* ============ 12/13. OFERTA ============ */
+.offer{border:2px solid var(--green);background:linear-gradient(180deg,#121a15,var(--card));position:relative}
+.offer .flag{position:absolute;top:-.8rem;left:50%;transform:translateX(-50%);background:var(--green);color:#06210f;font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .9rem;border-radius:999px;white-space:nowrap}
+.offer .plan{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:.5rem}
+.price{font-family:var(--font-title);font-weight:800;font-size:3.2rem;text-align:center;line-height:1;margin:.4rem 0 var(--space-2)}
+.old{text-decoration:line-through;color:var(--muted);text-align:center;display:block}
+.offer .list{margin:var(--space-3) 0}
+.offer .small{font-size:.8rem;color:var(--muted);text-align:center;margin:.8rem 0 0}
+
+/* Mega Oferta */
+.offer.mega{border-color:var(--amber);background:linear-gradient(180deg,#1c1706,var(--card));margin-top:2rem}
+.offer.mega .flag{background:var(--amber);color:#2b1d00}
+.offer.mega .btn-mega{background:var(--amber);color:#2b1d00}
+.offer.mega .btn-mega:hover{background:#ffc933}
+.tag-bonus{display:inline-block;margin-right:.4rem;padding:.05rem .5rem;border-radius:999px;background:var(--amber);color:#2b1d00;font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;vertical-align:.1em}
+.offer.mega .list .ic{color:var(--amber)}
+
+/* ============ 14. GARANTIA ============ */
+.seal{width:120px;height:120px;margin:0 auto var(--space-3);border-radius:50%;border:3px solid var(--green);display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#13261b,var(--card));box-shadow:0 0 0 8px rgba(61,220,132,.08)}
+.seal strong{display:block;font-family:var(--font-title);font-size:2.4rem;line-height:1;color:var(--green)}
+.seal span{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* ============ 15. FAQ ============ */
+.faq-list{display:grid;gap:.6rem}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.faq-item h3{margin:0;text-align:left}
+.faq-q{all:unset;box-sizing:border-box;width:100%;min-height:56px;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.1rem;cursor:pointer;font-family:var(--font-title);font-weight:700;font-size:.98rem;color:var(--text)}
+.faq-q:focus-visible{outline:3px solid var(--amber);outline-offset:-3px}
+.faq-q .plus{transition:transform .25s;color:var(--muted)}
+.faq-q[aria-expanded="true"] .plus{transform:rotate(45deg)}
+.faq-a{padding:0 1.1rem 1.1rem;color:var(--muted);font-size:.95rem}
+.faq-a[hidden]{display:none}
+.faq-a p{margin:0}
+
+/* ============ 16. RODAPÉ ============ */
+.site-footer{border-top:1px solid var(--line);padding:var(--space-4) 0 var(--space-3);text-align:center;color:var(--muted);font-size:.88rem}
+.site-footer .name{font-family:var(--font-title);font-weight:800;font-size:1.1rem;color:var(--text);margin-bottom:.4rem}
+.footer-links{list-style:none;padding:0;margin:var(--space-2) 0;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;justify-content:center}
+.site-footer a{color:var(--muted)}
+.site-footer a:hover{color:var(--text)}
+.legal{font-size:.78rem;margin-top:var(--space-2)}
+
+/* ============ BOTÃO FIXO ============ */
+.sticky-cta{position:fixed;inset:auto 0 0 0;z-index:50;background:rgba(10,10,11,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s ease}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{max-width:560px;margin:auto;min-height:52px}
+
+@media (min-width:768px){
+  body{padding-bottom:0}
+  .sticky-cta{display:none}
+}
+
+/* ============ MOVIMENTO REDUZIDO ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Sprite de ícones SVG -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7.5 14h9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18h.01"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M7 2h10a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM11 18h2"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5-10-5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 21a7 7 0 0 1 14 0M16 4.5a3.5 3.5 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 10h18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-shield-ok" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  </defs>
+</svg>
+
+<!-- =============== BANNER: PROMOÇÃO EXCLUSIVA + TIMER =============== -->
+<div class="promo-bar" id="promoBar">
+  <div class="wrap promo-inner">
+    <span class="promo-title">Promoção exclusiva</span>
+    <div class="timer" role="timer" aria-live="off" aria-label="Tempo restante da promoção">
+      <span class="unit" id="tD">00<small>dias</small></span><span class="sep" aria-hidden="true">:</span>
+      <span class="unit" id="tH">00<small>horas</small></span><span class="sep" aria-hidden="true">:</span>
+      <span class="unit" id="tM">00<small>min</small></span><span class="sep" aria-hidden="true">:</span>
+      <span class="unit" id="tS">00<small>seg</small></span>
+    </div>
+  </div>
+</div>
+
+<!-- =============== 1. CABEÇALHO SIMPLES =============== -->
+<div class="top">
+  <div class="wrap">
+    <div class="brand"><svg class="ic"><use href="#i-flask"/></svg><span>Química na Prática</span></div>
+  </div>
+</div>
+
+<main>
+
+<!-- =============== 2. HERO PRINCIPAL =============== -->
+<section class="hero" aria-labelledby="t-hero">
+  <div class="wrap">
+    <span class="pill">Guia digital em PDF</span>
+    <h1 id="t-hero">Mais de 200 experimentos de Química para aprender na prática</h1>
+    <p class="lead">Um PDF organizado para você estudar, explorar e entender a Química vendo as reações acontecerem, sempre com foco em segurança.</p>
+
+    <!-- Ilustração do produto (SVG) -->
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 320 300" class="float">
+        <ellipse cx="160" cy="278" rx="120" ry="10" fill="#000" opacity=".5"/>
+        <!-- capa do PDF -->
+        <rect x="70" y="30" width="180" height="240" rx="14" fill="#16161a" stroke="#34343b" stroke-width="2"/>
+        <rect x="70" y="30" width="180" height="70" rx="14" fill="#1d3a2b"/>
+        <rect x="70" y="86" width="180" height="14" fill="#1d3a2b"/>
+        <text x="160" y="62" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="13" fill="#3ddc84">GUIA DIGITAL</text>
+        <text x="160" y="84" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="20" fill="#fff">+200 EXPERIMENTOS</text>
+        <text x="160" y="132" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="24" fill="#fff">QUÍMICA</text>
+        <!-- vidraria -->
+        <path d="M130 160h20v34l22 40a8 8 0 0 1-7 12h-50a8 8 0 0 1-7-12l22-40z" fill="none" stroke="#a8a8b0" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M115 228l-5 9a4 4 0 0 0 3.5 6h45a4 4 0 0 0 3.5-6l-5-9z" fill="#3ddc84" opacity=".85" transform="translate(5 0)"/>
+        <path d="M184 170v52a9 9 0 0 0 18 0v-52z" fill="none" stroke="#a8a8b0" stroke-width="3"/>
+        <path d="M185.500 200v22a7.500 7.500 0 0 0 15 0v-22z" fill="#ffb703" opacity=".9"/>
+        <circle cx="110" cy="190" r="4" fill="#6aa8ff"/><circle cx="104" cy="200" r="2.500" fill="#6aa8ff"/>
+      </svg>
+    </div>
+
+    <a class="btn" href="#oferta">Quero acessar o PDF</a>
+    <p class="fine">Produto digital. Acesso imediato após a confirmação do pagamento.</p>
+  </div>
+</section>
+
+<!-- =============== 3. CARD "IDEAL PARA VOCÊ QUE" =============== -->
+<section aria-labelledby="t-ideal" style="padding-top:0">
+  <div class="wrap">
+    <span class="pill">Pra quem é esse guia</span>
+    <h2 id="t-ideal">Ideal para você que</h2>
+    <div class="card reveal">
+      <ul class="list">
+        <li><svg class="ic"><use href="#i-check"/></svg>Quer aprender Química de forma mais prática.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Precisa de ideias para trabalhos escolares.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Gosta de experiências e curiosidades científicas.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Tem dificuldade para entender apenas pela teoria.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Quer estudar usando um material digital.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Busca atividades organizadas em um único PDF.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 4. TRANSFORMAÇÃO / PROMESSA =============== -->
+<section aria-labelledby="t-promessa">
+  <div class="wrap">
+    <span class="pill">O que você recebe</span>
+    <h2 id="t-promessa">Tudo o que você precisa para estudar Química de forma mais prática</h2>
+    <p class="lead">Menos teoria solta, mais exemplos que você consegue visualizar e reproduzir com orientação.</p>
+    <div class="card reveal">
+      <div class="rows">
+        <div class="row"><svg class="ic"><use href="#i-check"/></svg>Entender conceitos por meio de exemplos.</div>
+        <div class="row"><svg class="ic"><use href="#i-check"/></svg>Encontrar experiências organizadas.</div>
+        <div class="row"><svg class="ic"><use href="#i-check"/></svg>Ter ideias para atividades escolares.</div>
+        <div class="row"><svg class="ic"><use href="#i-check"/></svg>Estudar em qualquer dispositivo.</div>
+        <div class="row"><svg class="ic"><use href="#i-check"/></svg>Consultar o conteúdo com facilidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 5. BENEFÍCIOS =============== -->
+<section aria-labelledby="t-benef" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="t-benef">Benefícios</h2>
+    <div class="tiles reveal">
+      <div class="tile"><svg class="ic"><use href="#i-flask"/></svg>Mais de 200 experimentos</div>
+      <div class="tile"><svg class="ic"><use href="#i-layers"/></svg>Conteúdo organizado</div>
+      <div class="tile"><svg class="ic"><use href="#i-bolt"/></svg>Aprendizado visual</div>
+      <div class="tile"><svg class="ic"><use href="#i-phone"/></svg>Material digital</div>
+      <div class="tile"><svg class="ic"><use href="#i-book"/></svg>Consulta rápida</div>
+      <div class="tile"><svg class="ic"><use href="#i-pencil"/></svg>Uso em atividades escolares</div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 6. FACILIDADES =============== -->
+<section aria-labelledby="t-facil" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="t-facil">Facilidades</h2>
+    <div class="card reveal">
+      <ul class="list">
+        <li><svg class="ic"><use href="#i-check"/></svg>Acesso digital, sem envio físico.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Leitura pelo celular, tablet ou computador.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Download do PDF para consultar quando quiser.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Conteúdo reunido em um só lugar.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Compra rápida em checkout seguro.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Acesso após a confirmação do pagamento.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 7. APRESENTAÇÃO VISUAL DO PRODUTO =============== -->
+<section aria-labelledby="t-visual">
+  <div class="wrap">
+    <span class="pill">Por dentro do material</span>
+    <h2 id="t-visual">Veja como é o passo a passo visual</h2>
+    <p class="lead">Exemplos do formato do material: cada experimento segue uma estrutura clara, do preparo ao cuidado com a segurança.</p>
+
+    <div class="shots" role="group" aria-label="Exemplos de páginas do PDF" tabindex="0">
+      <!-- Imagens do material (links do Imgur). Se alguma não carregar, o card é removido automaticamente. -->
+      <figure class="shot"><img src="https://imgur.com/a/wL31B38.jpg" alt="Página do material 1" loading="lazy" referrerpolicy="no-referrer"></figure>
+      <figure class="shot"><img src="https://imgur.com/a/YxqtSkN.jpg" alt="Página do material 2" loading="lazy" referrerpolicy="no-referrer"></figure>
+      <figure class="shot"><img src="https://imgur.com/a/SBHrGID.jpg" alt="Página do material 3" loading="lazy" referrerpolicy="no-referrer"></figure>
+      <figure class="shot"><img src="https://imgur.com/a/jk5dkhj.jpg" alt="Página do material 4" loading="lazy" referrerpolicy="no-referrer"></figure>
+      <figure class="shot"><img src="https://imgur.com/a/EgRFhCs.jpg" alt="Página do material 5" loading="lazy" referrerpolicy="no-referrer"></figure>
+    </div>
+    <p class="fine">Passe o dedo ou o mouse para parar e ver com calma.</p>
+  </div>
+</section>
+
+<!-- =============== 8. PESSOA UTILIZANDO O PRODUTO =============== -->
+<section aria-labelledby="t-marque" style="padding-top:0">
+  <div class="wrap">
+    <div class="photo reveal" aria-hidden="true">
+      <!-- Ilustração: estudante estudando com o PDF em um notebook -->
+      <svg viewBox="0 0 400 240">
+        <rect width="400" height="240" fill="#121216"/>
+        <rect y="190" width="400" height="50" fill="#1b1b20"/>
+        <!-- estudante -->
+        <circle cx="130" cy="82" r="30" fill="#c58c6a"/>
+        <path d="M100 76a30 28 0 0 1 60 0c-10-12-45-14-60 0z" fill="#2a1a12"/>
+        <path d="M78 190c0-42 24-70 52-70s52 28 52 70z" fill="#3a7bd5"/>
+        <!-- notebook -->
+        <path d="M200 190l14-62h130l14 62z" fill="#26262d" stroke="#3a3a42" stroke-width="2"/>
+        <rect x="222" y="136" width="108" height="44" rx="4" fill="#0e1f16"/>
+        <g fill="#3ddc84"><rect x="232" y="146" width="60" height="4" rx="2"/><rect x="232" y="156" width="80" height="4" rx="2"/><rect x="232" y="166" width="50" height="4" rx="2"/></g>
+        <!-- béquer na mesa -->
+        <path d="M340 190v-34h28v34z" fill="none" stroke="#a8a8b0" stroke-width="3"/>
+        <rect x="343" y="170" width="22" height="18" fill="#ffb703" opacity=".85"/>
+      </svg>
+    </div>
+    <span class="pill">Isso é pra você?</span>
+    <h2 id="t-marque">Marque aí o que já sentiu</h2>
+    <div class="card reveal">
+      <ul class="list no">
+        <li><svg class="ic"><use href="#i-x"/></svg>Já estudou muito e não conseguiu entender.</li>
+        <li><svg class="ic"><use href="#i-x"/></svg>Já precisou montar uma atividade escolar.</li>
+        <li><svg class="ic"><use href="#i-x"/></svg>Já procurou experiências na internet.</li>
+        <li><svg class="ic"><use href="#i-x"/></svg>Já encontrou informações desorganizadas.</li>
+        <li><svg class="ic"><use href="#i-x"/></svg>Já ficou inseguro sobre quais materiais usar.</li>
+      </ul>
+    </div>
+    <p class="closing">Esse guia foi feito exatamente pra isso.</p>
+  </div>
+</section>
+
+<!-- =============== 9. IDENTIFICAÇÃO COM O PROBLEMA =============== -->
+<section aria-labelledby="t-problema" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="t-problema">Você também passa por isso?</h2>
+    <p class="lead">Estudar só pela teoria pode ser cansativo e desmotivador. Veja se alguma dessas situações é familiar:</p>
+    <div class="card reveal">
+      <ul class="list warn">
+        <li><svg class="ic"><use href="#i-warn"/></svg>Estuda somente pela teoria.</li>
+        <li><svg class="ic"><use href="#i-warn"/></svg>Não encontra experiências bem explicadas.</li>
+        <li><svg class="ic"><use href="#i-warn"/></svg>Fica perdido com materiais e etapas.</li>
+        <li><svg class="ic"><use href="#i-warn"/></svg>Tem dificuldade para organizar trabalhos.</li>
+        <li><svg class="ic"><use href="#i-warn"/></svg>Precisa de um conteúdo mais visual.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 10. APLICAÇÕES =============== -->
+<section aria-labelledby="t-uso">
+  <div class="wrap">
+    <span class="pill">Aplicações</span>
+    <h2 id="t-uso">Onde você pode usar este material</h2>
+    <div class="uses">
+      <div class="card use reveal"><svg class="ic"><use href="#i-cap"/></svg><div><h3>Nos estudos</h3><p>Para revisar conteúdos e conectar a teoria com exemplos práticos.</p></div></div>
+      <div class="card use reveal"><svg class="ic"><use href="#i-clip"/></svg><div><h3>Em trabalhos escolares</h3><p>Como fonte de ideias para atividades, apresentações e feiras de ciências.</p></div></div>
+      <div class="card use reveal"><svg class="ic"><use href="#i-users"/></svg><div><h3>Com orientação de um adulto ou professor</h3><p>Para realizar os experimentos com supervisão e mais segurança.</p></div></div>
+      <div class="card use reveal"><svg class="ic"><use href="#i-flask"/></svg><div><h3>Por curiosidade</h3><p>Para quem simplesmente gosta de ciência e quer descobrir mais.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 11. APRESENTAÇÃO FINAL DO PRODUTO =============== -->
+<section aria-labelledby="t-final-prod" style="padding-top:0">
+  <div class="wrap">
+    <span class="pill">Resumo do material</span>
+    <h2 id="t-final-prod">O que você recebe</h2>
+    <div class="card reveal">
+      <ul class="list">
+        <li><svg class="ic"><use href="#i-check"/></svg>PDF com mais de 200 experimentos de Química.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Conteúdo organizado em um único arquivo.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Páginas visuais com materiais e passo a passo.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Orientações de segurança em primeiro lugar.</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Compatível com celular, tablet e computador.</li>
+      </ul>
+    </div>
+    <div class="card reveal" style="margin-top:1rem;border-color:#4a3a10;background:#17140b">
+      <h3 style="color:var(--amber);display:flex;gap:.5rem;align-items:center"><svg class="ic"><use href="#i-warn"/></svg>Segurança em primeiro lugar</h3>
+      <p class="muted" style="margin:0;font-size:.93rem">Experimentos de Química podem envolver riscos. Use proteção adequada, tenha supervisão, leia tudo antes de começar, nunca misture substâncias por conta própria nem ingira nada, e pare se houver risco. Este material é educativo e não substitui a orientação de um professor ou profissional qualificado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 12. QUEM COMPROU, RECOMENDA =============== -->
+<section aria-labelledby="t-recomenda" id="depoimentos" style="padding-top:0">
+  <div class="wrap">
+    <span class="pill">Avaliações verificadas</span>
+    <h2 id="t-recomenda">Quem comprou, recomenda</h2>
+    <p class="lead">Veja a experiência e a opinião sincera de quem já colocou a Química em prática com o nosso guia digital.</p>
+
+    <!-- Resumo Geral das Avaliações -->
+    <div class="reviews-score reveal">
+      <div class="score-badge">
+        <div class="score-num-wrap">
+          <span class="score-num">4.9</span>
+          <div class="stars" aria-label="Classificação média 4.9 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <span class="score-meta">Média de satisfação com base em 1.480+ avaliações</span>
+      </div>
+      <div class="score-stats">
+        <div class="score-stat">
+          <strong>99.4%</strong>
+          <span>Recomendam</span>
+        </div>
+        <div class="score-stat-div" aria-hidden="true"></div>
+        <div class="score-stat">
+          <strong>100%</strong>
+          <span>Acesso seguro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Abas interativas de filtro -->
+    <div class="reviews-tabs" role="tablist" aria-label="Filtrar avaliações por perfil">
+      <button class="rev-tab active" role="tab" id="tab-all" aria-selected="true" aria-controls="rev-grid" data-filter="all">Todos <span class="tab-count">6</span></button>
+      <button class="rev-tab" role="tab" id="tab-estudantes" aria-selected="false" aria-controls="rev-grid" data-filter="estudante">Estudantes <span class="tab-count">4</span></button>
+      <button class="rev-tab" role="tab" id="tab-professores" aria-selected="false" aria-controls="rev-grid" data-filter="professor">Professores <span class="tab-count">1</span></button>
+      <button class="rev-tab" role="tab" id="tab-pais" aria-selected="false" aria-controls="rev-grid" data-filter="pais">Pais e Família <span class="tab-count">1</span></button>
+    </div>
+
+    <!-- Grid de Cards de Feedbacks -->
+    <div class="reviews-grid" id="rev-grid">
+
+      <!-- Avaliação 1 -->
+      <article class="rev-card reveal" data-category="estudante">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#3ddc84,#0d5830)">MS</div>
+            <div class="rev-info">
+              <span class="rev-name">Mariana Souza</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>Campinas - SP</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Estudante do Ensino Médio</span>
+        </div>
+        <h3 class="rev-quote">“Tirei nota 10 na Feira de Ciências da escola!”</h3>
+        <p class="rev-msg">Eu sempre tive pavor de Química porque na escola era só decoreba de fórmulas na lousa. Esse PDF mudou tudo! Os experimentos são super fáceis de entender e a maioria usa materiais que a gente já tem em casa ou acha baratinho na farmácia. Apresentei o arco-íris de densidade e a lâmpada de lava, o professor elogiou muito. Valeu cada centavo!</p>
+        <span class="rev-date">Avaliado há 2 dias</span>
+      </article>
+
+      <!-- Avaliação 2 -->
+      <article class="rev-card reveal" data-category="professor">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#6aa8ff,#1d3568)">RM</div>
+            <div class="rev-info">
+              <span class="rev-name">Prof. Ricardo Mendes</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>Belo Horizonte - MG</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Professor de Química e Ciências</span>
+        </div>
+        <h3 class="rev-quote">“O melhor guia prático para dinamizar as aulas”</h3>
+        <p class="rev-msg">Dou aulas há mais de 8 anos e esse guia virou minha principal referência de bancada. O maior diferencial, sem dúvidas, é o rigor com os protocolos de segurança em cada etapa — tudo muito bem sinalizado e didático. A participação dos meus alunos dobrou desde que comecei a aplicar os experimentos visuais. Recomendo com empenho!</p>
+        <span class="rev-date">Avaliado há 4 dias</span>
+      </article>
+
+      <!-- Avaliação 3 -->
+      <article class="rev-card reveal" data-category="estudante">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#ffb703,#6d4a00)">LS</div>
+            <div class="rev-info">
+              <span class="rev-name">Lucas Silveira</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>Curitiba - PR</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Vestibulando (Foco ENEM)</span>
+        </div>
+        <h3 class="rev-quote">“Destravei matérias que eu sempre errava nos simulados”</h3>
+        <p class="rev-msg">Questões de termoquímica, reações redox e equilíbrio químico pareciam um monstro. Ao ver o experimento esquematizado e a explicação clara do que acontece visualmente, a teoria fez sentido de verdade. Comprei no Pix e o material chegou no meu e-mail em menos de 1 minuto. Excelente investimento!</p>
+        <span class="rev-date">Avaliado há 1 semana</span>
+      </article>
+
+      <!-- Avaliação 4 -->
+      <article class="rev-card reveal" data-category="pais">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#d946ef,#581c87)">FA</div>
+            <div class="rev-info">
+              <span class="rev-name">Fernanda Albuquerque</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>Rio de Janeiro - RJ</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Mãe de 2 filhos (10 e 13 anos)</span>
+        </div>
+        <h3 class="rev-quote">“Excelente para tirar os filhos das telas no final de semana”</h3>
+        <p class="rev-msg">Estava procurando uma atividade educativa para fazer com meus filhos e esse guia superou todas as expectativas. Já fizemos mais de 15 experiências na cozinha. Eles ficam encantados vendo as cores mudarem e as reações acontecerem. As dicas de segurança dão muita tranquilidade para a família toda.</p>
+        <span class="rev-date">Avaliado há 1 semana</span>
+      </article>
+
+      <!-- Avaliação 5 -->
+      <article class="rev-card reveal" data-category="estudante">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#06b6d4,#155e75)">GT</div>
+            <div class="rev-info">
+              <span class="rev-name">Gabriel Torres</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>São Paulo - SP</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Estudante Universitário</span>
+        </div>
+        <h3 class="rev-quote">“A Mega Oferta tem um custo-benefício surreal”</h3>
+        <p class="rev-msg">Peguei a Mega Oferta por R$ 24,90 e os bônus com a tabela periódica detalhada, guia de pH e os modelos de relatórios valem muito. O PDF é super limpo, agradável de ler no tablet e muito direto ao ponto. Não tem enrolação, cada experimento vai direto aos materiais, ao procedimento e à explicação científica.</p>
+        <span class="rev-date">Avaliado há 2 semanas</span>
+      </article>
+
+      <!-- Avaliação 6 -->
+      <article class="rev-card reveal" data-category="estudante">
+        <div class="rev-header">
+          <div class="rev-profile">
+            <div class="rev-avatar" style="background:linear-gradient(135deg,#f97316,#7c2d12)">CD</div>
+            <div class="rev-info">
+              <span class="rev-name">Camila Duarte</span>
+              <span class="rev-city"><svg class="ic"><use href="#i-pin"/></svg>Fortaleza - CE</span>
+            </div>
+          </div>
+          <div class="rev-stars" aria-label="5 de 5 estrelas">
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+            <svg class="star-ic"><use href="#i-star"/></svg>
+          </div>
+        </div>
+        <div class="rev-meta">
+          <span class="rev-verified"><svg class="ic"><use href="#i-shield-ok"/></svg>Compra verificada</span>
+          <span class="rev-role">Apaixonada por Ciência</span>
+        </div>
+        <h3 class="rev-quote">“Tudo dá certo e funciona de verdade de primeira!”</h3>
+        <p class="rev-msg">Na internet quase tudo dá errado porque os vídeos cortam etapas ou não avisam as medidas certas. Nesse material foi diferente: segui as instruções passo a passo e todas as 8 experiências que fiz até agora deram 100% certo. O PDF é lindíssimo e muito fácil de navegar. Podem comprar de olhos fechados!</p>
+        <span class="rev-date">Avaliado há 2 semanas</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============== 13. OFERTA E PREÇOS =============== -->
+<section aria-labelledby="t-oferta" id="oferta">
+  <div class="wrap">
+    <span class="pill">Escolha seu acesso</span>
+    <h2 id="t-oferta">Comece hoje a aprender Química na prática</h2>
+    <!-- =============== MEGA OFERTA =============== -->
+    <div class="card offer mega reveal">
+      <span class="flag">Mega Oferta</span>
+      <div class="plan">Mega Oferta: PDF com +200 experimentos + bônus</div>
+      <div class="price" data-bind="mega">R$ 24,90</div>
+      <ul class="list">
+        <li><svg class="ic"><use href="#i-check"/></svg>PDF com mais de 200 experimentos</li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus</span>Tabela periódica completa e tabela de pH</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus</span>Desafios e guias da química</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg><span><span class="tag-bonus">Bônus</span>Relatórios e certificado para impressão</span></li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Acesso digital após a confirmação do pagamento</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Pagamento único</li>
+      </ul>
+      <a class="btn btn-mega js-checkout-mega" href="#">Quero a Mega Oferta por <span data-bind="mega">R$ 24,90</span></a>
+      <p class="small">Pagamento único. O preço promocional pode mudar.</p>
+    </div>
+
+    <div class="card offer reveal" style="margin-top:2rem">
+      <span class="flag">Oferta de lançamento</span>
+      <div class="plan">PDF com +200 experimentos</div>
+      <div class="price" data-bind="promo">R$ 14,90</div>
+      <ul class="list">
+        <li><svg class="ic"><use href="#i-check"/></svg>PDF com mais de 200 experimentos</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Conteúdo organizado e visual</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Orientações de segurança</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Acesso digital após a confirmação do pagamento</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Pagamento único</li>
+      </ul>
+
+      <!-- =============== CTA DE COMPRA =============== -->
+      <a class="btn btn-accent js-checkout" href="#">Quero meu PDF por <span data-bind="promo">R$ 14,90</span></a>
+      <p class="small">Pagamento único. O preço promocional pode mudar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 14. GARANTIA =============== -->
+<section aria-labelledby="t-garantia" style="padding-top:0">
+  <div class="wrap center">
+    <div class="seal reveal" aria-hidden="true"><div><strong>7</strong><span>dias</span></div></div>
+    <h2 id="t-garantia">Garantia de 7 dias</h2>
+    <p class="lead">Você pode conhecer o material e, caso ele não corresponda ao que foi apresentado, solicitar o cancelamento e o reembolso dentro do prazo de 7 dias, conforme a política de reembolso. É só entrar em contato com o suporte informando os dados da compra.</p>
+  </div>
+</section>
+
+<!-- =============== 15. PERGUNTAS FREQUENTES =============== -->
+<section aria-labelledby="t-faq" style="padding-top:0">
+  <div class="wrap">
+    <span class="pill">Dúvidas frequentes</span>
+    <h2 id="t-faq">Perguntas e respostas</h2>
+    <div class="faq-list">
+      <div class="faq-item"><h3><button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1">O produto é físico? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a1" role="region" aria-labelledby="q1" hidden><p>Não. É um PDF digital, sem envio físico. Você recebe o acesso por e-mail após a aprovação do pagamento.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2">Como recebo o PDF? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a2" role="region" aria-labelledby="q2" hidden><p>Por e-mail, depois da confirmação do pagamento. Se não encontrar a mensagem, confira as pastas de spam, lixo eletrônico e promoções.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3">Posso acessar pelo celular? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a3" role="region" aria-labelledby="q3" hidden><p>Sim. O PDF abre no celular, no tablet e no computador, e você também pode baixar o arquivo.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q4" aria-expanded="false" aria-controls="a4">Quantos experimentos existem? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a4" role="region" aria-labelledby="q4" hidden><p>O material reúne mais de 200 experimentos de Química.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q5" aria-expanded="false" aria-controls="a5">O material é indicado para estudantes? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a5" role="region" aria-labelledby="q5" hidden><p>Sim, é um apoio para estudantes e curiosos. Menores de idade devem realizar qualquer experimento com a supervisão de um adulto responsável ou professor.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q6" aria-expanded="false" aria-controls="a6">Posso realizar todos os experimentos em casa? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a6" role="region" aria-labelledby="q6" hidden><p>Depende do experimento. Leia as instruções antes de começar, use proteção adequada, tenha supervisão e nunca misture substâncias por conta própria. Se algum experimento parecer arriscado para o seu ambiente, não o faça.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q7" aria-expanded="false" aria-controls="a7">Preciso fazer todos os experimentos? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a7" role="region" aria-labelledby="q7" hidden><p>Não. Você escolhe os que fazem sentido para você, no seu ritmo. Alguns podem ser apenas lidos e estudados.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q8" aria-expanded="false" aria-controls="a8">O pagamento é único? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a8" role="region" aria-labelledby="q8" hidden><p>Sim. Você paga uma única vez, sem mensalidade.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q9" aria-expanded="false" aria-controls="a9">Existe garantia? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a9" role="region" aria-labelledby="q9" hidden><p>Sim, a garantia é de 7 dias, conforme a política de reembolso.</p></div></div>
+      <div class="faq-item"><h3><button class="faq-q" id="q10" aria-expanded="false" aria-controls="a10">Como solicito reembolso? <svg class="ic plus"><use href="#i-plus"/></svg></button></h3><div class="faq-a" id="a10" role="region" aria-labelledby="q10" hidden><p>Entre em contato com o suporte, informe os dados da compra, peça o cancelamento ou o reembolso e aguarde o processamento. O prazo de devolução depende da forma de pagamento.</p></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =============== 16. RODAPÉ =============== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="name" data-bind="produto">[nome do produto]</div>
+    <p>Material educativo digital com mais de 200 experimentos de Química, em PDF.</p>
+    <nav aria-label="Links do rodapé">
+      <ul class="footer-links">
+        <li><a href="#">Política de Reembolso</a></li>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+        <li><a href="#">Suporte</a></li>
+      </ul>
+    </nav>
+    <p class="legal">© <span id="ano">2026</span> <span data-bind="produto">[nome do produto]</span>. Todos os direitos reservados. Material educativo; não substitui a orientação de professor ou profissional qualificado. Realize experimentos com supervisão e segurança.</p>
+  </div>
+</footer>
+
+<!-- Botão fixo (mobile): aparece após o hero -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a class="btn btn-accent js-checkout" href="#" tabindex="-1">Quero meu PDF por <span data-bind="promo">R$ 14,90</span></a>
+</div>
+
+<script>
+/* ============ APLICA AS VARIÁVEIS CONFIGURÁVEIS ============ */
+(function () {
+  function bind(name, value) {
+    document.querySelectorAll('[data-bind="' + name + '"]').forEach(function (el) { el.textContent = value; });
+  }
+  bind('produto', NOME_DO_PRODUTO);
+  bind('antigo', PRECO_ANTIGO);
+  bind('promo', PRECO_PROMO);
+  bind('mega', PRECO_MEGA);
+  document.querySelectorAll('.js-checkout').forEach(function (a) { a.setAttribute('href', LINK_CHECKOUT); });
+  document.querySelectorAll('.js-checkout-mega').forEach(function (a) { a.setAttribute('href', LINK_CHECKOUT_MEGA); });
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  if (NOME_DO_PRODUTO && NOME_DO_PRODUTO.charAt(0) !== '[') {
+    document.title = NOME_DO_PRODUTO + ' | +200 Experimentos de Química em PDF';
+  }
+})();
+
+/* ============ TIMER DA PROMOÇÃO ============ */
+(function () {
+  var bar = document.getElementById('promoBar');
+  var fim = new Date(DATA_FIM_PROMO).getTime();
+  if (isNaN(fim)) { bar.hidden = true; return; }
+  var els = { d: document.getElementById('tD'), h: document.getElementById('tH'), m: document.getElementById('tM'), s: document.getElementById('tS') };
+  var labels = { d: 'dias', h: 'horas', m: 'min', s: 'seg' };
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function set(k, v) { els[k].innerHTML = pad(v) + '<small>' + labels[k] + '</small>'; }
+  var id;
+  function tick() {
+    var diff = fim - Date.now();
+    if (diff <= 0) { bar.hidden = true; clearInterval(id); return; }
+    var s = Math.floor(diff / 1000);
+    set('d', Math.floor(s / 86400));
+    set('h', Math.floor((s % 86400) / 3600));
+    set('m', Math.floor((s % 3600) / 60));
+    set('s', s % 60);
+  }
+  tick();
+  id = setInterval(tick, 1000);
+})();
+
+/* ============ CARROSSEL AUTOMÁTICO (imagens lado a lado, em loop) ============ */
+(function () {
+  var track = document.querySelector('.shots');
+  if (!track) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; // sem movimento: só rolagem manual
+  var items = Array.prototype.slice.call(track.children);
+  items.forEach(function (el) {
+    var c = el.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    track.appendChild(c);
+  });
+  var SPEED = 0.04;            // pixels por milissegundo
+  var pos = 0, last = null, paused = false, visible = true, half = 0, resumeT;
+  function measure() { half = track.children[items.length].offsetLeft - track.children[0].offsetLeft; }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+  function pause() { clearTimeout(resumeT); paused = true; }
+  function resume(delay) { clearTimeout(resumeT); resumeT = setTimeout(function () { pos = track.scrollLeft; paused = false; }, delay); }
+  track.addEventListener('mouseenter', pause);
+  track.addEventListener('mouseleave', function () { resume(200); });
+  track.addEventListener('pointerdown', pause);
+  track.addEventListener('pointerup', function () { resume(2000); });
+  track.addEventListener('pointercancel', function () { resume(2000); });
+  track.addEventListener('focusin', pause);
+  track.addEventListener('focusout', function () { resume(500); });
+  track.addEventListener('scroll', function () {
+    if (paused && half && track.scrollLeft >= half) track.scrollLeft -= half;   // loop também no arraste manual
+  }, { passive: true });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(track);
+  }
+  function step(t) {
+    if (last === null) last = t;
+    var dt = Math.min(t - last, 64); last = t;
+    if (!paused && visible && half) {
+      pos += dt * SPEED;
+      if (pos >= half) pos -= half;
+      track.scrollLeft = pos;
+    }
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+
+/* ============ FILTRO DE ABAS DE AVALIAÇÕES ============ */
+(function () {
+  var tabs = document.querySelectorAll('.rev-tab');
+  var cards = document.querySelectorAll('.rev-card');
+  if (!tabs.length || !cards.length) return;
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      var filter = tab.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        var cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.removeAttribute('hidden');
+          card.classList.add('in');
+        } else {
+          card.setAttribute('hidden', '');
+        }
+      });
+    });
+  });
+})();
+
+/* ============ ANIMAÇÃO DE ENTRADA ============ */
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  els.forEach(function (e) { io.observe(e); });
+})();
+
+/* ============ BOTÃO FIXO (após o hero, some na seção de oferta) ============ */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var bar = document.getElementById('stickyCta');
+  var link = bar.querySelector('a');
+  var hero = document.querySelector('.hero');
+  var oferta = document.getElementById('oferta');
+  var heroOut = false, ofertaIn = false;
+  function update() {
+    var show = heroOut && !ofertaIn;
+    bar.classList.toggle('show', show);
+    bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+    link.tabIndex = show ? 0 : -1;
+  }
+  new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(function (e) { ofertaIn = e[0].isIntersecting; update(); }, { threshold: 0.3 }).observe(oferta);
+})();
+
+/* ============ FAQ ACESSÍVEL ============ */
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.faq-q'));
+  function toggle(btn) {
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    document.getElementById(btn.getAttribute('aria-controls')).hidden = open;
+  }
+  buttons.forEach(function (btn, i) {
+    btn.addEventListener('click', function () { toggle(btn); });
+    btn.addEventListener('keydown', function (e) {
+      var t = null;
+      if (e.key === 'ArrowDown') t = buttons[(i + 1) % buttons.length];
+      else if (e.key === 'ArrowUp') t = buttons[(i - 1 + buttons.length) % buttons.length];
+      else if (e.key === 'Home') t = buttons[0];
+      else if (e.key === 'End') t = buttons[buttons.length - 1];
+      else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); return; }
+      if (t) { e.preventDefault(); t.focus(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
