@@ -130,8 +130,8 @@ section{padding:var(--space-5) 0}
 .shot figcaption{font-family:var(--font-title);font-weight:700;font-size:.84rem;color:var(--text);text-align:center;margin-top:.7rem;letter-spacing:.01em}
 
 /* ============ 8. PESSOA ============ */
-.photo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-3)}
-.photo svg{display:block;width:100%;height:auto}
+.photo{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin:0 auto var(--space-3);max-width:540px;box-shadow:0 12px 32px rgba(0,0,0,.45)}
+.photo img{display:block;width:100%;height:auto;border-radius:inherit}
 .closing{font-family:var(--font-title);font-weight:800;text-align:center;font-size:1.1rem;margin-top:var(--space-3)}
 
 /* ============ 10. APLICAÇÕES ============ */
@@ -383,24 +383,24 @@ section{padding:var(--space-5) 0}
 
     <div class="shots" role="group" aria-label="Exemplos de páginas do PDF" tabindex="0">
       <figure class="shot">
-        <img src="images/pagina-1.jpeg" alt="Páginas do guia: Cristais de Açúcar, Submarino Cartesiano e Chuva no Pote" loading="lazy" onerror="this.src='https://i.imgur.com/ANxIhSW.jpeg'">
-        <figcaption>Soluções, Pressão e Densidade</figcaption>
+        <img src="images/pagina-1.jpeg" alt="Página do guia: Mensagem Invisível Sem Aquecer (Ácidos, Bases e Indicadores)" loading="lazy" onerror="this.src='https://i.ibb.co/HT0RDd1y/Whats-App-Image-2026-10-24-at-01-43-25.jpg'">
+        <figcaption>Ácidos, Bases e Indicadores</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/pagina-2.jpeg" alt="Páginas do guia: Lâmpada de Lava, Balão por Leveduras e Separação Magnética" loading="lazy" onerror="this.src='https://i.imgur.com/wrSVE9h.jpeg'">
-        <figcaption>Misturas, Bioquímica e Reações</figcaption>
+        <img src="images/pagina-2.jpeg" alt="Página do guia: Qual Substância Dissolve Mais? (Solubilidade)" loading="lazy" onerror="this.src='https://i.ibb.co/MyhvFMMM/Whats-App-Image-2026-10-24-at-01-43-23.jpg'">
+        <figcaption>Solubilidade e Saturação</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/pagina-3.jpeg" alt="Páginas do guia: Acústica, Som, Luz, Óptica e Pêndulo" loading="lazy" onerror="this.src='https://i.imgur.com/SZGVsRd.jpeg'">
-        <figcaption>Acústica, Óptica e Forças</figcaption>
+        <img src="images/pagina-3.jpeg" alt="Página do guia: Homogênea ou Heterogênea? (Soluções e Misturas)" loading="lazy" onerror="this.src='https://i.ibb.co/cfkDs3Q/Whats-App-Image-2026-10-24-at-01-43-16.jpg'">
+        <figcaption>Misturas e Soluções</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/pagina-4.jpeg" alt="Páginas do guia: Escala de pH com Repolho Roxo, Indicador de Cúrcuma e Convecção" loading="lazy" onerror="this.src='https://i.imgur.com/d07QFdE.jpeg'">
-        <figcaption>Ácidos, Bases e Escala de pH</figcaption>
+        <img src="images/pagina-4.jpeg" alt="Página do guia: O Solo é Ácido ou Básico? (Solo e pH)" loading="lazy" onerror="this.src='https://i.ibb.co/6JFKT0sf/Whats-App-Image-2026-10-24-at-01-43-15-1.jpg'">
+        <figcaption>Acidez do Solo e pH</figcaption>
       </figure>
       <figure class="shot">
-        <img src="images/pagina-5.jpeg" alt="Páginas do guia: Chuva Ácida, Coagulante Natural, Cristais de Sal e Oxidação" loading="lazy" onerror="this.src='https://i.imgur.com/57vBMdT.jpeg'">
-        <figcaption>Química Ambiental e Oxidação</figcaption>
+        <img src="images/pagina-5.jpeg" alt="Página do guia: O Ímã Atravessa Materiais? (Magnetismo)" loading="lazy" onerror="this.src='https://i.ibb.co/9HmSkdNj/Whats-App-Image-2026-10-24-at-01-43-15.jpg'">
+        <figcaption>Magnetismo na Prática</figcaption>
       </figure>
     </div>
     <p class="fine">Passe o dedo ou o mouse para parar e ver com calma.</p>
@@ -410,23 +410,8 @@ section{padding:var(--space-5) 0}
 <!-- =============== 7. PESSOA UTILIZANDO O PRODUTO =============== -->
 <section aria-labelledby="t-marque" style="padding-top:0">
   <div class="wrap">
-    <div class="photo reveal" aria-hidden="true">
-      <!-- Ilustração: estudante estudando com o PDF em um notebook -->
-      <svg viewBox="0 0 400 240">
-        <rect width="400" height="240" fill="#121216"/>
-        <rect y="190" width="400" height="50" fill="#1b1b20"/>
-        <!-- estudante -->
-        <circle cx="130" cy="82" r="30" fill="#c58c6a"/>
-        <path d="M100 76a30 28 0 0 1 60 0c-10-12-45-14-60 0z" fill="#2a1a12"/>
-        <path d="M78 190c0-42 24-70 52-70s52 28 52 70z" fill="#3a7bd5"/>
-        <!-- notebook -->
-        <path d="M200 190l14-62h130l14 62z" fill="#26262d" stroke="#3a3a42" stroke-width="2"/>
-        <rect x="222" y="136" width="108" height="44" rx="4" fill="#0e1f16"/>
-        <g fill="#3ddc84"><rect x="232" y="146" width="60" height="4" rx="2"/><rect x="232" y="156" width="80" height="4" rx="2"/><rect x="232" y="166" width="50" height="4" rx="2"/></g>
-        <!-- béquer na mesa -->
-        <path d="M340 190v-34h28v34z" fill="none" stroke="#a8a8b0" stroke-width="3"/>
-        <rect x="343" y="170" width="22" height="18" fill="#ffb703" opacity=".85"/>
-      </svg>
+    <div class="photo reveal">
+      <img src="images/publico-alvo.png" alt="Professor e estudantes sobrecarregados com livros e fórmulas teóricas de química" loading="lazy" onerror="this.src='https://i.imgur.com/H8XkCxQ.png'">
     </div>
     <span class="pill">Isso é pra você?</span>
     <h2 id="t-marque">Marque aí o que já sentiu</h2>
